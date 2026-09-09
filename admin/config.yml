@@ -1,0 +1,160 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+
+  - name: "films"
+    label: "Films"
+    folder: "content/films"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Film Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Year"
+        name: "year"
+        widget: "string"
+        required: false
+
+      - label: "Film Type"
+        name: "type"
+        widget: "select"
+        options:
+          - "Feature Film"
+          - "Documentary"
+          - "Short Film"
+          - "Series"
+          - "Other"
+
+      - label: "Poster"
+        name: "poster"
+        widget: "image"
+        required: false
+
+      - label: "Synopsis"
+        name: "synopsis"
+        widget: "text"
+
+      - label: "Trailer URL"
+        name: "trailer"
+        widget: "string"
+        required: false
+
+      - label: "Director"
+        name: "director"
+        widget: "string"
+        required: false
+
+      - label: "Producer"
+        name: "producer"
+        widget: "string"
+        required: false
+
+      - label: "Festivals"
+        name: "festivals"
+        widget: "list"
+        required: false
+
+      - label: "Credits"
+        name: "credits"
+        widget: "markdown"
+        required: false
+
+      - label: "Description"
+        name: "body"
+        widget: "markdown"
+        required: false
+
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+        required: false
+
+      - label: "Article"
+        name: "body"
+        widget: "markdown"
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+
+      - label: "Caption"
+        name: "caption"
+        widget: "string"
+        required: false
+
+  - name: "settings"
+    label: "Company Information"
+    files:
+      - label: "Company Information"
+        name: "company"
+        file: "content/company.md"
+        fields:
+          - label: "Company Name"
+            name: "name"
+            widget: "string"
+
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+
+          - label: "About"
+            name: "about"
+            widget: "markdown"
+
+          - label: "Email"
+            name: "email"
+            widget: "string"
+
+          - label: "Phone"
+            name: "phone"
+            widget: "string"
+
+          - label: "Location"
+            name: "location"
+            widget: "string"
+
+          - label: "Instagram"
+            name: "instagram"
+            widget: "string"
+            required: false
+
+          - label: "YouTube"
+            name: "youtube"
+            widget: "string"
+            required: false
