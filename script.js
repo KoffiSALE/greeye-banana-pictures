@@ -24,15 +24,69 @@ async function loadCMSContent() {
 
     const company = await companyRes.json();
     const filmsData = await filmsRes.json();
-    const newsData = await newsRes.json();
-    const galleryData = await galleryRes.json();
+    const films = filmsData.films || [];
 
-    console.log("CMS content loaded:", {
-      company,
-      films: filmsData.films,
-      news: newsData.news,
-      gallery: galleryData.gallery
-    });
+    // Company information
+    const heroCopy = document.querySelector(".hero-copy");
+    if (heroCopy && company.about) {
+      heroCopy.textContent = company.about;
+    }
+
+    const introKicker = document.querySelector(".intro .kicker");
+    if (introKicker && company.tagline) {
+      introKicker.textContent = company.tagline;
+    }
+
+    const introCopy = document.querySelector(".intro-copy p");
+    if (introCopy && company.about) {
+      introCopy.textContent = company.about;
+    }
+
+    // Contact information
+    const contactDetails = document.querySelector(".contact-details");
+
+    if (contactDetails) {
+      contactDetails.innerHTML = `
+        <a href="mailto:${company.email}">${company.email}</a>
+        <a href="tel:${company.phone.replace(/\s/g, "")}">${company.phone}</a>
+        <p>${company.location}</p>
+      `;
+    }
+
+    // Films
+    const filmGrid = document.querySelector(".film-grid");
+
+    if (filmGrid && films.length) {
+      filmGrid.innerHTML = "";
+
+      films.forEach((film, index) => {
+        const card = document.createElement("article");
+
+        let sizeClass = "";
+        if (index === 0) sizeClass = " large";
+        if (index === films.length - 1) sizeClass = " wide";
+
+        card.className = `film-card${sizeClass}`;
+
+        const imageClass = `image-${index + 1}`;
+
+        card.innerHTML = `
+          <div class="film-image ${imageClass}">
+            ${film.poster ? `<img src="${film.poster}" alt="${film.title} poster">` : ""}
+            <span class="film-type">${film.type || "FILM"}</span>
+          </div>
+
+          <div class="film-meta">
+            <h3>${film.title || ""}</h3>
+            <p>${film.synopsis || ""}</p>
+          </div>
+        `;
+
+        filmGrid.appendChild(card);
+      });
+    }
+
+    console.log("CMS content loaded successfully.");
 
   } catch (error) {
     console.error("Could not load CMS content:", error);
