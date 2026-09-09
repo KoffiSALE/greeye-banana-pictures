@@ -1,56 +1,62 @@
 {
   "films": [
     {
-      "title": "UPSTANDING",
-      "year": "2023",
-      "type": "Feature Documentary",
-      "poster": "",
+      "body": "",
+      "director": "Alexandre Sibomana",
+      "poster": "/assets/uploads/upstanding-caver.jpg",
+      "producer": "GREEYE BANANA PICTURES",
+      "trailer": "",
       "synopsis": "A feature documentary from Rwanda.",
-      "trailer": "",
-      "director": "Alexandre Sibomana",
-      "producer": "GREEYE BANANA PICTURES",
-      "festivals": ["Zanzibar International Film Festival"],
+      "title": "UPSTANDING",
       "credits": "",
-      "body": ""
+      "type": "Feature Documentary",
+      "festivals": [
+        "Zanzibar International Film Festival"
+      ],
+      "year": "2023"
     },
     {
-      "title": "CARVER",
-      "year": "2018",
-      "type": "Documentary",
+      "body": "",
+      "director": "Alexandre Sibomana",
       "poster": "",
+      "producer": "GREEYE BANANA PICTURES",
+      "trailer": "",
       "synopsis": "A short documentary exploring the life and work of a traditional carver.",
-      "trailer": "",
-      "director": "Alexandre Sibomana",
-      "producer": "GREEYE BANANA PICTURES",
-      "festivals": ["Luxor African Film Festival"],
+      "title": "CARVER",
       "credits": "",
-      "body": ""
-    },
-    {
-      "title": "A SEED OF MEMORIES",
-      "year": "2017",
-      "type": "Fiction",
-      "poster": "",
-      "synopsis": "A fiction film from Rwanda.",
-      "trailer": "",
-      "director": "Alexandre Sibomana",
-      "producer": "GREEYE BANANA PICTURES",
-      "festivals": ["Zanzibar International Film Festival"],
-      "credits": "",
-      "body": ""
-    },
-    {
-      "title": "NIGHT DANCER",
-      "year": "2027",
       "type": "Documentary",
-      "poster": "",
-      "synopsis": "A documentary exploring the controversial Ekimansuro dance through the story of Muhoza, a dancer and mother of five living in Kigali.",
-      "trailer": "",
+      "festivals": [
+        "Luxor African Film Festival"
+      ],
+      "year": "2018"
+    },
+    {
+      "body": "",
       "director": "Alexandre Sibomana",
+      "poster": "",
       "producer": "GREEYE BANANA PICTURES",
-      "festivals": [],
+      "trailer": "",
+      "synopsis": "A fiction film from Rwanda.",
+      "title": "A SEED OF MEMORIES",
       "credits": "",
-      "body": ""
+      "type": "Fiction",
+      "festivals": [
+        "Zanzibar International Film Festival"
+      ],
+      "year": "2017"
+    },
+    {
+      "body": "",
+      "director": "Alexandre Sibomana",
+      "poster": "",
+      "producer": "GREEYE BANANA PICTURES",
+      "trailer": "",
+      "synopsis": "A documentary exploring the controversial Ekimansuro dance through the story of Muhoza, a dancer and mother of five living in Kigali.",
+      "title": "NIGHT DANCER",
+      "credits": "",
+      "type": "Documentary",
+      "festivals": [],
+      "year": "2027"
     }
   ]
 }
