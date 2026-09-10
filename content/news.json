@@ -1,9 +1,11 @@
-[
-  {
-    "title": "Welcome to GREEYE BANANA PICTURES",
-    "date": "2026-09-10",
-    "image": "",
-    "summary": "News and updates from GREEYE BANANA PICTURES.",
-    "body": "Welcome to the official website of GREEYE BANANA PICTURES. We will share film projects, festival news, production updates and other company announcements here."
-  }
-]
+{
+  "news": [
+    {
+      "title": "Welcome to GREEYE BANANA PICTURES",
+      "date": "2026-09-10",
+      "image": "",
+      "summary": "News and updates from GREEYE BANANA PICTURES.",
+      "body": "Welcome to the official website of GREEYE BANANA PICTURES. We will share film projects, festival news, production updates and other company announcements here."
+    }
+  ]
+}
