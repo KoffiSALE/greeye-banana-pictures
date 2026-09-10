@@ -2,8 +2,12 @@
   "gallery": [
     {
       "title": "GREEYE BANANA PICTURES",
-      "image": "",
+      "image": "/assets/uploads/482017689_664573459359095_6479476964778213324_n.jpg",
       "caption": "Production and filmmaking at GREEYE BANANA PICTURES."
+    },
+    {
+      "image": "/assets/uploads/482017689_664573459359095_6479476964778213324_n.jpg",
+      "title": "On set 2023"
     }
   ]
 }
