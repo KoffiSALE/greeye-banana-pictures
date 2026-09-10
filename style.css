@@ -85,22 +85,44 @@ h2 { font-size:clamp(38px, 5.2vw, 72px); line-height:1.02; letter-spacing:-.045e
 .section-head { display:flex; justify-content:space-between; align-items:end; gap:40px; }
 .section-head .section-label { margin-bottom:20px; }
 .section-head p { color:rgba(255,255,255,.6); max-width:240px; }
-.film-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:24px; margin-top:45px; }
-.film-card { min-width:0; }
-.film-card.large { grid-row:span 2; }
-.film-card.wide { grid-column:span 2; }
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 45px;
+}
+
+.film-card {
+  min-width: 0;
+}
+
 .film-image {
   position: relative;
   overflow: hidden;
+  width: 100%;
   aspect-ratio: 2 / 3;
   background-size: cover;
   background-position: center;
+}
+
+.film-card.large,
+.film-card.wide {
+  grid-column: auto;
+  grid-row: auto;
 }
 
 .film-card.large .film-image,
 .film-card.wide .film-image {
   min-height: 0;
   aspect-ratio: 2 / 3;
+}
+
+.film-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 }
 
 .film-image img {
