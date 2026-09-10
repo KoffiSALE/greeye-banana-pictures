@@ -1,7 +1,9 @@
-[
-  {
-    "title": "GREEYE BANANA PICTURES",
-    "image": "",
-    "caption": "Production and filmmaking at GREEYE BANANA PICTURES."
-  }
-]
+{
+  "gallery": [
+    {
+      "title": "GREEYE BANANA PICTURES",
+      "image": "",
+      "caption": "Production and filmmaking at GREEYE BANANA PICTURES."
+    }
+  ]
+}
